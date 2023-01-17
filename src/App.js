@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
 import SignIn from './components/SignIn';
+import HomePage from './components/HomePage';
 import { createTheme } from '@mui/material/styles';
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
         <SignIn theme={theme} />
       ) : (
         <Layout>
-          <h1>HomePage</h1>
+          <HomePage theme={theme} />
         </Layout>
       )}
     </div>

@@ -1,0 +1,49 @@
+
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 79px 0 0 79px;
+    /* padding: 25px; */
+}
+
+.cardItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%;
+    padding: 55px;
+    margin: 25px 25px 79px 25px;
+    border-radius: 15%;
+    /* tablet */
+    /* width: 300px;
+    height: 300px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.trending {
+    padding: 55px;
+    font-size: 90px;
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.3rem;
+    font-size: 0.9rem;
+    background-color: transparent;
+    color: #FAFAF8;
+    border-radius: 4%;
+    border: 1px solid #ffc807;
+  }
+
+  .form {
+    margin-top: 55px;
+  }
+
+  .input {
+    padding: 25px;
+  }
+   
