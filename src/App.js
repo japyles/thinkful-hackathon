@@ -5,7 +5,7 @@ import SignIn from './components/SignIn';
 import { createTheme } from '@mui/material/styles';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   const theme = createTheme({
     status: {

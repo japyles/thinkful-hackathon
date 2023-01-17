@@ -11,10 +11,16 @@ const Header = () => {
           <a href='#'>Home</a>
         </li>
         <li className={styles.navitem}>
-          <a href='#'>News</a>
+          <a href='#'>Resumes Services</a>
         </li>
         <li className={styles.navitem}>
-          <a href='#'>Account</a>
+          <a href='#'>Events & Meetups</a>
+        </li>
+        <li className={styles.navitem}>
+          <a href='#'>Login</a>
+        </li>
+        <li className={styles.navitem}>
+          <a href='#'>Sign Up</a>
         </li>
       </ul>
     </nav>
