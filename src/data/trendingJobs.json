@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "UX/UI",
+    "subTitle": "Designer",
+    "quantity": "200"
+  },
+  {
+    "id": 2,
+    "title": "Full Stack",
+    "subTitle": "Developer",
+    "quantity": "190"
+  },
+  {
+    "id": 3,
+    "title": "Python",
+    "subTitle": "Developer",
+    "quantity": "170"
+  },
+  {
+    "id": 4,
+    "title": "JAVA",
+    "subTitle": "Developer",
+    "quantity": "160"
+  },
+  {
+    "id": 5,
+    "title": "Cyber Security",
+    "subTitle": "",
+    "quantity": "155"
+  },
+  {
+    "id": 6,
+    "title": ".NET",
+    "subTitle": "Developer",
+    "quantity": "90"
+  }
+]
