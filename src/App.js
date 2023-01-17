@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Layout from './components/Layout';
+import SignIn from './components/SignIn';
+import { createTheme } from '@mui/material/styles';
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const theme = createTheme({
+    status: {
+      danger: '#e53e3e',
+    },
+    palette: {
+      primary: {
+        main: '#009688',
+        darker: '#004d40',
+      },
+      neutral: {
+        main: '#263238',
+        contrastText: '#cfd8dc',
+      },
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      {!loggedIn ? (
+        <SignIn theme={theme} />
+      ) : (
+        <Layout>
+          <h1>HomePage</h1>
+        </Layout>
+      )}
     </div>
   );
 }
