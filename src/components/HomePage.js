@@ -8,6 +8,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Input from '@mui/material/Input';
 import JobCard from './JobCard';
 import data from '../data/trendingJobs.json';
+import appliedSaved from '../data/appliedSaved.json';
 import styles from '../styles/HomePage.module.css';
 
 const HomePage = ({ theme }) => {
@@ -52,6 +53,15 @@ const HomePage = ({ theme }) => {
         </Button>
       </form>
       <div>
+        <div className={styles.savedJobs}>
+          {appliedSaved &&
+            appliedSaved.map(({ title, quantity }) => (
+              <div className={styles.cardItem}>
+                <JobCard title={title} quantity={quantity} />
+              </div>
+            ))}
+        </div>
+
         <h1 className={styles.trending}>Trending</h1>
 
         <div className={styles.card}>

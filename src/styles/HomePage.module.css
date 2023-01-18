@@ -47,3 +47,10 @@
     padding: 25px;
   }
    
+  .savedJobs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 79px 0 0 79px;
+    /* padding: 25px; */
+}
