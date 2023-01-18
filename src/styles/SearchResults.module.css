@@ -1,4 +1,4 @@
-input {
+.input {
     padding: 10px;
     font-size: 30px;
     border: 1px;
@@ -6,16 +6,16 @@ input {
     border-color: rgb(184, 184, 184);
 }
 
-input:focus {
+/* input:focus {
     outline: none;
-}
+} */
 
-input[name=main_search] {
+.input[name=main_search] {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 } 
 
-input[name=location_search] {
+.input[name=location_search] {
     border-right: none;
 } 
 
@@ -28,7 +28,7 @@ button {
     padding: 10px;
 }
 
-button[type=location] {
+button[type=btn-location] {
     border-left: none;
 }
 
@@ -38,11 +38,11 @@ button[type=submit] {
     border-bottom-right-radius: 10px;
 }
 
-button[type=filter] {
+button[type=btn] {
     border: none;
 }
 
-h2 {
+.results {
     text-align: left;
     margin-left: 27%;
     margin-top: 5%;
