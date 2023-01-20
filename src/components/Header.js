@@ -2,6 +2,7 @@ import styles from '../styles/Header.module.css';
 import React, { useState } from 'react';
 import Popover from '@mui/material/Popover';
 import SignInForm from './SignInForm';
+import logo from '../logo.PNG';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState('');
@@ -35,7 +36,7 @@ const Header = () => {
       </div>
       <nav className={styles.navbar}>
         <a href='#' className={styles.logo}>
-          <img src='../../public/logo.png' alt='logo' />
+        <img src={logo} alt='logo' />
         </a>
         <ul className={styles.navlinks}>
           <li className={styles.navitem}>
@@ -45,13 +46,18 @@ const Header = () => {
             <a href='#'>Resumes Services</a>
           </li>
           <li className={styles.navitem}>
-            <a href='#'>Events & Meetups</a>
-          </li>
-          <li className={styles.navitem} onClick={handleClick}>
-            <a href='#'>Sign In</a>
+            <a href='#'>Portfolio Reviews</a>
           </li>
           <li className={styles.navitem}>
-            <a href='#'>Sign Up</a>
+            <a href='#'>Events & Meetups</a>
+          </li>
+        </ul>
+        <ul className={styles.navlinks}>
+          <li className={styles.navitem} onClick={handleClick}>
+            <a href='#' className={styles.login}>Login</a>
+          </li>
+          <li className={styles.navitem}>
+            <a href='#' className={styles.login}>Sign Up</a>
           </li>
         </ul>
       </nav>
