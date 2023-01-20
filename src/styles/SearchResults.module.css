@@ -43,7 +43,14 @@ button[type=btn] {
 }
 
 .results {
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    /* text-align: left;
     margin-left: 27%;
-    margin-top: 5%;
+    margin-top: 5%; */
+}
+
+.searchform {
+    margin: 15px 0; 
 }

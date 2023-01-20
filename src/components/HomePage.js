@@ -7,7 +7,9 @@ import TuneIcon from '@mui/icons-material/Tune';
 import InputAdornment from '@mui/material/InputAdornment';
 import Input from '@mui/material/Input';
 import JobCard from './JobCard';
+import SearchResults from './SearchResults';
 import data from '../data/trendingJobs.json';
+import appliedSaved from '../data/appliedSaved.json';
 import styles from '../styles/HomePage.module.css';
 
 const HomePage = ({ theme }) => {
@@ -18,6 +20,7 @@ const HomePage = ({ theme }) => {
 
   return (
     <div>
+      {/* <SearchResults /> */}
       <form className={styles.form} onSubmit={searchSubmit}>
         <Input
           type='text'
@@ -43,15 +46,27 @@ const HomePage = ({ theme }) => {
         />{' '}
         <Button
           variant='outlined'
-          style={{ color: theme.palette.neutral.main, marginTop: '15px' }}
+          style={{
+            color: theme.palette.neutral.main,
+            marginTop: '3px',
+          }}
         >
           <Search />
         </Button>{' '}
-        <Button style={{ marginTop: '10px' }}>
+        <Button style={{ marginTop: '4px' }}>
           <TuneIcon fontSize='large' color='action' />
         </Button>
       </form>
       <div>
+        <div className={styles.savedJobs}>
+          {appliedSaved &&
+            appliedSaved.map(({ title, quantity }) => (
+              <div className={styles.cardItem}>
+                <JobCard title={title} quantity={quantity} />
+              </div>
+            ))}
+        </div>
+
         <h1 className={styles.trending}>Trending</h1>
 
         <div className={styles.card}>
