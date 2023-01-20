@@ -7,10 +7,12 @@ import TuneIcon from '@mui/icons-material/Tune';
 import InputAdornment from '@mui/material/InputAdornment';
 import Input from '@mui/material/Input';
 import JobCard from './JobCard';
-import SearchResults from './SearchResults';
+import SearchResults from './SearchForm';
 import data from '../data/trendingJobs.json';
 import appliedSaved from '../data/appliedSaved.json';
 import styles from '../styles/HomePage.module.css';
+
+import SearchForm from './SearchForm';
 
 const HomePage = ({ theme }) => {
   const [search, setSearch] = useState({});
@@ -20,7 +22,7 @@ const HomePage = ({ theme }) => {
 
   return (
     <div>
-      {/* <SearchResults /> */}
+      {/* <SearchForm /> */}
       <form className={styles.form} onSubmit={searchSubmit}>
         <Input
           type='text'
@@ -51,7 +53,7 @@ const HomePage = ({ theme }) => {
             marginTop: '3px',
           }}
         >
-          <Search />
+           <Search />
         </Button>{' '}
         <Button style={{ marginTop: '4px' }}>
           <TuneIcon fontSize='large' color='action' />
