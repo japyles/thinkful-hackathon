@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '../styles/SearchResults.module.css';
+import styles from '../styles/SearchForm.module.css';
 import { CiSearch } from 'react-icons/ci';
 import { CiLocationOn } from 'react-icons/ci';
 import { IoOptionsOutline } from 'react-icons/io5';
 
-function SearchResults({ formData, handleChange, handleSubmit }) {
+function SearchForm({ formData, handleChange, handleSubmit }) {
   return (
     <div className={styles.searchform}>
       <form onSubmit={handleSubmit}>
@@ -42,4 +42,4 @@ function SearchResults({ formData, handleChange, handleSubmit }) {
     </div>
   );
 }
-export default SearchResults;
+export default SearchForm;
