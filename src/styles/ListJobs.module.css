@@ -1,0 +1,59 @@
+.header {
+padding-top: 80px;
+padding-bottom: 30px;
+width: 59%;
+}
+
+.card {
+    display: flex;
+    border: gray;
+    border-style: solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto auto 50px auto;
+    padding: 30px;
+}
+
+.left {
+    width: 50%;
+    text-align: left;
+}
+
+.right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.info {
+    display: flex;
+}
+
+.info h4 {
+    margin: 20px 20px 0 0;
+}
+
+.highlight {
+    background: linear-gradient(to top, yellow 50%, transparent 50%);
+    border-radius: 5px;
+}
+
+.progress {
+    display: flex;
+    text-align: right;
+    width: 30%;
+}
+
+.match {
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.time {
+    width: 30%;
+    padding-right: 30px;
+    text-align: left;
+}
