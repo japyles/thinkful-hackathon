@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -7,12 +8,12 @@ import TuneIcon from '@mui/icons-material/Tune';
 import InputAdornment from '@mui/material/InputAdornment';
 import Input from '@mui/material/Input';
 import JobCard from './JobCard';
-import SearchResults from './SearchForm';
 import data from '../data/trendingJobs.json';
 import appliedSaved from '../data/appliedSaved.json';
 import styles from '../styles/HomePage.module.css';
 
 import SearchForm from './SearchForm';
+import ListJobs from './ListJobs';
 
 const HomePage = ({ theme }) => {
   const [search, setSearch] = useState({});
@@ -59,6 +60,9 @@ const HomePage = ({ theme }) => {
           <TuneIcon fontSize='large' color='action' />
         </Button>
       </form>
+
+      <ListJobs/>
+
       <div>
         <div className={styles.savedJobs}>
           {appliedSaved &&
