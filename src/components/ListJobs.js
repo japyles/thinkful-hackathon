@@ -10,7 +10,6 @@ import { IconContext } from "react-icons";
 function ListJobs() {
 
     const [jobs, setJobs] = useState([]);
-    const [isActive, setIsActive] = useState(false);
 
     const fetchJobs=()=>{
       fetch('/jobData.json'
@@ -34,7 +33,29 @@ function ListJobs() {
       fetchJobs()
     },[])
 
-    const jobList = jobs.map((job) => {
+    
+    const [isActive, setIsActive] = useState(null);
+
+    const handleAccordian = accordianNumber => {
+        setIsActive(isActive === accordianNumber? null : accordianNumber);
+    }
+
+    
+
+    const jobList = jobs.map((job, index) => {
+
+        const proSkills = job.required_pro_skills.map((skill) => 
+            <li>{skill}</li>
+        );
+
+        const techSkills = job.required_tech_skills.map((skill) => 
+        <li>{skill}</li>
+        );
+
+        const benefits = job.benefits.map((benefit) => 
+        <li>{benefit}</li>
+        );
+        
         return (
             <div className={styles.card}>
             <div className={styles.carddisplay}>
@@ -78,11 +99,11 @@ function ListJobs() {
             </div>
 
                 <div className="accordion">
-                    <div className="accordion-item">
+                    <div id={job.job_id} className="accordion-item">
                         
-                    {isActive && <div className={styles.content}>
-                            
-                            <h4>Company Profile</h4>
+                    <div className={isActive === index ? styles.accordianOpen : styles.accordianClose}>
+                        <div className={styles.content}>
+                            <h3>Company Profile</h3>
                             <p>{job.company_profile}</p>
                             
                             <h4>Required Professional Skills</h4>
@@ -92,17 +113,16 @@ function ListJobs() {
                             {job.required_tech_skills}
 
                             <p>Benefits:</p>
-                            {job.benefits}
-                            
-                            
-                            
-                            </div>}
+                                <ul>{benefits}</ul>
+                        </div>  
+                    </div>
                         <div
-                        className="accordion-title"
-                        onClick={() => setIsActive(!isActive)}
+                        className={styles.view}
+                        onClick={() => handleAccordian(index)}
                         >
-                        {/* <div>{job.title}</div> */}
-                        <div>{isActive ? 'View -' : 'View'}</div>
+                        {/* <div>{job.title}</div>
+                        <div>{isActive ? 'View -' : 'View'}</div> */}
+                        View
                         </div>
                     </div>
                 </div>
