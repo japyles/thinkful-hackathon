@@ -1,146 +1,59 @@
-/* mobile */
+    .card {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 79px;
+      margin-bottom: 79px;
+      /* padding: 25px; */
+    }
+    
+    .cardItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 25%;
+      padding: 55px;
+      margin: 25px 25px 25px 25px;
+      border-radius: 15%;
+      width: 300px;
+      height: 300px;
+      border: 1px darkgray solid;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 15px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    
+    .trending {
+      padding-top: 79px;
+      font-size: 75px;
+      text-transform: uppercase;
+    }
+    
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 55px;
+    }
+    
+    .input {
+      padding: 25px;
+      border: 1px darkgray solid;
+      border-radius: 6px;
+      width: 32%;
+      /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* flex-wrap: wrap; */
-    /* margin: 79px 0 0 79px; */
-    /* padding: 25px; */
-}
-
-.cardItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-basis: 25%; */
-    padding: 25px;
-    margin: 15px 75px;
-    border-radius: 10%;
-    text-transform: uppercase;
-    /* tablet */
-    /* width: 300px;
-    height: 300px; */
+    .job {
+      margin-right: 17px;
+    }
+     
+    .savedJobs {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 79px 0 0 79px;
+      /* padding: 25px; */
+    }
+    
+    /* .search {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.trending {
-    padding: 55px 10px 0 10px;
-    margin-top: 45px;
-    font-size: 63px;
-}
-
-.reservation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.3rem;
-    font-size: 0.9rem;
-    background-color: transparent;
-    color: #FAFAF8;
-    border-radius: 4%;
-    border: 1px solid #ffc807;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
-  }
-
-  .input {
-    padding: 25px;
-    margin: 8px 25px;
-    border: 1px black solid;
-    border-radius: 6px;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-  }
-
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 22px;
-  }
-   
-  .savedJobs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 25px;
-    /* flex-wrap: wrap; */
-    /* margin: 79px 0 0 79px; */
-    /* padding: 25px; */
-}
-
-.search {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-
-
-/* tablet */
-
-/* .card {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 79px 0 0 79px;
-    /* padding: 25px; */
-/* } */ 
-
-/* .cardItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 25%;
-    padding: 55px;
-    margin: 25px 25px 79px 25px;
-    border-radius: 15%;
-    /* tablet */
-    /* width: 300px;
-    height: 300px; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-/* } */ 
-
-/* .trending {
-    padding: 55px;
-    font-size: 90px;
-}
-
-.reservation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.3rem;
-    font-size: 0.9rem;
-    background-color: transparent;
-    color: #FAFAF8;
-    border-radius: 4%;
-    border: 1px solid #ffc807;
-  }
-
-  .form {
-    margin-top: 55px;
-  }
-
-  .input {
-    padding: 25px;
-    margin-right: 17px;
-    border: 1px black solid;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  }
-   
-  .savedJobs {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 79px 0 0 79px;
-    /* padding: 25px; */
-/* } */
-
-/* .search { */
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-/* } */ 
-
+    } */

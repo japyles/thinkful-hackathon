@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import PopupMenu from './PopupMenu';
 import styles from '../styles/Header.module.css';
 import Popover from '@mui/material/Popover';
 import SignInForm from './SignInForm';
 import useWindowDimensions from '../utilities/useWindowDimensions';
-import logo from '../logo.PNG';
+import logo from '../logo.png';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState('');
@@ -24,8 +23,22 @@ const Header = () => {
 
   return (
     <div>
-      {width <= 915 ? (
+      {width < 800 ? (
         <div>
+          <div>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+            >
+              <SignInForm />
+            </Popover>
+          </div>
           <nav className='navbar navbar-expand-sm navbar-dark bg-primary'>
             <a className={`navbar-brand ${styles.brand}`} href='#'>
               JOB PORTAL
@@ -46,28 +59,41 @@ const Header = () => {
               id='navbarSupportedContent'
             >
               <ul className='list-group d-block d-sm-none'>
-                <li className={`list-unstyled border-0 p-2, ${styles.list}`}>
+                <li className={`list-unstyled border-0 p-2, ${styles.navitem}`}>
                   {' '}
                   <a href='' className='text-light'>
                     Home{' '}
                   </a>
                 </li>
-                <li className={`list-unstyled border-0 p-2, ${styles.list}`}>
+                <li className={`list-unstyled border-0 p-2, ${styles.navitem}`}>
                   {' '}
                   <a href='' className='text-light'>
-                    Resume Servies{' '}
+                    Resume Services{' '}
                   </a>
                 </li>
-                <li className={`list-unstyled border-0 p-2, ${styles.list}`}>
+                <li className={`list-unstyled border-0 p-2, ${styles.navitem}`}>
                   {' '}
                   <a href='' className='text-light'>
                     Portfolio Review{' '}
                   </a>
                 </li>
-                <li className={`list-unstyled border-0 p-2, ${styles.list}`}>
+                <li className={`list-unstyled border-0 p-2, ${styles.navitem}`}>
                   {' '}
                   <a href='' className='text-light'>
                     Events & Meetups{' '}
+                  </a>
+                </li>
+                <li
+                  className={`list-unstyled border-0 p-2, ${styles.navitem}`}
+                  onClick={handleClick}
+                >
+                  <a href='#' className={styles.login}>
+                    Login
+                  </a>
+                </li>
+                <li className={`list-unstyled border-0 p-2, ${styles.navitem}`}>
+                  <a href='#' className={styles.login}>
+                    Sign Up
                   </a>
                 </li>
               </ul>
@@ -133,37 +159,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import styles from '../styles/Header.module.css';
-
-// const Header = () => {
-//   const handleClick = () => {};
-//   return (
-//     <nav className={styles.navbar}>
-//       <a href='#' className={styles.logo}>
-//         <img src='../../public/logo.png' alt='logo' />
-//       </a>
-//       <ul className={styles.navlinks}>
-//         <li className={styles.navitem}>
-//           <a href='#'>Home</a>
-//         </li>
-//         <li className={styles.navitem}>
-//           <a href='#'>Resumes Services</a>
-//         </li>
-//         <li className={styles.navitem}>
-//           <a href='#'>Events & Meetups</a>
-//         </li>
-//         <li className={styles.navitem}>
-//           <div onClick={handleClick}>
-//             <a href='#'>Login</a>
-//           </div>
-//         </li>
-//         <li className={styles.navitem}>
-//           <a href='#'>Sign Up</a>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Header;
