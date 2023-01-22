@@ -5,17 +5,17 @@ width: 59%;
 }
 
 .card {
-
     border: gray;
     border-style: solid;
     border-radius: 10px;
-    padding: 30px 30px 10px 30px;
     width: 50%;
     margin: auto auto 50px auto;
+
 }
 
 .carddisplay {
     display: flex;
+    padding: 20px;
 }
 
 .left {
@@ -81,11 +81,34 @@ width: 59%;
     border-radius: 80px;
 }
 
+.accordianClose {
+    margin: 3px auto;
+    height: 0px;
+    overflow: hidden;
+}
+
+.accordianOpen {
+    margin: 3px auto;
+    height: 100%;
+}
+
+.view {
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 .content {
     text-align: left;
     padding: 10px;
 }
 
-.content h4 {
-    margin-bottom: 10px;
+.content h3, .content p {
+    margin: 10px 0 10px 0;
+}
+
+.content li {
+    margin-left: 5%;
 }
