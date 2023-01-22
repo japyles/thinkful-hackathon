@@ -5,13 +5,17 @@ width: 59%;
 }
 
 .card {
-    display: flex;
+
     border: gray;
     border-style: solid;
     border-radius: 10px;
+    padding: 30px 30px 10px 30px;
     width: 50%;
     margin: auto auto 50px auto;
-    padding: 30px;
+}
+
+.carddisplay {
+    display: flex;
 }
 
 .left {
@@ -53,7 +57,35 @@ width: 59%;
 }
 
 .time {
-    width: 30%;
+    width: 40%;
+    margin-top: 5%;
     padding-right: 30px;
     text-align: left;
+}
+
+.bottomright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+
+.bookmark {
+    font-size: 2em;
+}
+
+.easyapply {
+    font-weight: normal;
+    color: #fff;
+    background-color: #0058DC;
+    padding: 5px 10px 5px 10px;
+    border-radius: 80px;
+}
+
+.content {
+    text-align: left;
+    padding: 10px;
+}
+
+.content h4 {
+    margin-bottom: 10px;
 }
