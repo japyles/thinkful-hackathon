@@ -22,7 +22,12 @@ html {
 
   .navlinks {
     display: flex;
+    align-items: center;
     list-style: none;
+  }
+
+  .navitem {
+    text-transform: uppercase;
   }
   
   .navitem a {
@@ -32,15 +37,16 @@ html {
     color: #fff;
   }
   
-  .navitem:hover a {
-    color: #fff;
+  .navitem:hover {
+    color: #f4f4;
   }
   
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0058DC;
+    background-color: #000;
+    /* background-color: #0058DC; */
   }
 
   .login {
@@ -58,11 +64,11 @@ html {
     margin-left: 50px;
   }
   
-  .list {
+  /* .list {
     text-decoration: none;
     text-transform: uppercase;
     padding: 8px;
-}
+} */
 
 .brand {
     margin-left: 10px;

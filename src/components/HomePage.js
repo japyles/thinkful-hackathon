@@ -15,7 +15,7 @@ import styles from '../styles/HomePage.module.css';
 import SearchForm from './SearchForm';
 import ListJobs from './ListJobs';
 
-const HomePage = ({ theme }) => {
+const HomePage = ({ theme, loggedIn }) => {
   const [search, setSearch] = useState({});
 
   const searchSubmit = () => {};
@@ -28,7 +28,7 @@ const HomePage = ({ theme }) => {
           type='text'
           name='job'
           placeholder='Job Title or Skill'
-          className={styles.input}
+          className={`${styles.input} ${styles.job}`}
           style={{ padding: '4px' }}
         ></Input>{' '}
         <Input
@@ -52,11 +52,11 @@ const HomePage = ({ theme }) => {
             style={{
               color: theme.palette.neutral.main,
               marginTop: '3px',
-              marginLeft: '5px',
-              marginRight: '75px',
+              marginLeft: '8px',
+              marginRight: '15px',
             }}
           >
-            <Search /> Search
+            <Search />
           </Button>{' '}
           <Button style={{ marginTop: '4px' }}>
             <TuneIcon fontSize='large' color='action' />
@@ -67,14 +67,24 @@ const HomePage = ({ theme }) => {
       <ListJobs/>
 
       <div>
-        <div className={styles.savedJobs}>
+        {loggedIn ? (
+          <div className={styles.savedJobs}>
+            {appliedSaved &&
+              appliedSaved.map(({ title, quantity }) => (
+                <div className={styles.cardItem}>
+                  <JobCard title={title} quantity={quantity} />
+                </div>
+              ))}
+          </div>
+        ) : null}
+        {/* <div className={styles.savedJobs}>
           {appliedSaved &&
             appliedSaved.map(({ title, quantity }) => (
               <div className={styles.cardItem}>
                 <JobCard title={title} quantity={quantity} />
               </div>
             ))}
-        </div>
+        </div> */}
 
         <h1 className={styles.trending}>Trending</h1>
 

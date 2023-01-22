@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
-import SignIn from './components/SignIn';
 import HomePage from './components/HomePage';
 import { createTheme } from '@mui/material/styles';
 
@@ -26,13 +25,9 @@ function App() {
 
   return (
     <div className='App'>
-      {!loggedIn ? (
-        <SignIn theme={theme} />
-      ) : (
-        <Layout>
-          <HomePage theme={theme} />
-        </Layout>
-      )}
+      <Layout>
+        <HomePage theme={theme} loggedIn={loggedIn} />
+      </Layout>
     </div>
   );
 }
