@@ -71,7 +71,12 @@ const SignInForm = () => {
 
         <Button
           variant='outlined'
-          style={{ color: theme.palette.neutral.main, marginTop: '15px' }}
+          style={{
+            color: theme.palette.neutral.main,
+            marginTop: '15px',
+            marginLeft: '55px',
+            marginRight: '55px',
+          }}
         >
           Sign In
         </Button>

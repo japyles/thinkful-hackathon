@@ -23,7 +23,6 @@ const HomePage = ({ theme }) => {
 
   return (
     <div>
-      {/* <SearchForm /> */}
       <form className={styles.form} onSubmit={searchSubmit}>
         <Input
           type='text'
@@ -47,18 +46,22 @@ const HomePage = ({ theme }) => {
             </InputAdornment>
           }
         />{' '}
-        <Button
-          variant='outlined'
-          style={{
-            color: theme.palette.neutral.main,
-            marginTop: '3px',
-          }}
-        >
-           <Search />
-        </Button>{' '}
-        <Button style={{ marginTop: '4px' }}>
-          <TuneIcon fontSize='large' color='action' />
-        </Button>
+        <div className={styles.button}>
+          <Button
+            variant='outlined'
+            style={{
+              color: theme.palette.neutral.main,
+              marginTop: '3px',
+              marginLeft: '5px',
+              marginRight: '75px',
+            }}
+          >
+            <Search /> Search
+          </Button>{' '}
+          <Button style={{ marginTop: '4px' }}>
+            <TuneIcon fontSize='large' color='action' />
+          </Button>
+        </div>
       </form>
 
       <ListJobs/>

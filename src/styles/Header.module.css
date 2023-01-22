@@ -58,3 +58,17 @@ html {
     margin-left: 50px;
   }
   
+  .list {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+.brand {
+    margin-left: 10px;
+}
+
+.toggler {
+    margin-right: 10px;
+}
+
