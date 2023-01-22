@@ -1,0 +1,53 @@
+[
+    {
+      "job_id": 1,
+      "title": "UX/UI",
+      "job_title": "UX/UI Designer",
+      "experience": 3,
+      "salary": "70,000",
+      "location": ["Remote", "Onsite"],
+      "profile_match": 90,
+      "posted": 10, 
+      "saved": false,
+      "easy_applied": false,
+      "company_name": "Pineapple Solutions",
+      "company_profile": "As a Pineapple Solutions developer on our team, you'll be responsible for leading the building of e-commerce applications, developing custom solutions, implementing designs, maintaining existing code.",
+      "required_pro_skills": ["Completely dependable and professional", "Great problem-solving skills", "Positive attitude", "Familiarity of Agile", "Good communication in writing, speaking and presenting at demos"],
+      "required_tech_skills": ["6+ years of experience with PHP", "4+ years of experience with Magento 2", "Experience with complex development processes", "Solid experience with MySQL, Docker, Composer & KnockoutJS", "Deep understanding of Magento architecture, design, theming, dunctional enhancements, optimization & integration methods", "Knowledge of how to identify and execute performance optimizations", "Good at troubleshooting and resolving bugs"],
+      "benefits": ["401(k)", "Paid time off", "Vision Insurance"]
+    },
+    {
+        "job_id": 2,
+        "title": "UX/UI",
+        "job_title": "Product Designer",
+        "experience": 2,
+        "salary": "60,000",
+        "location": ["Remote"],
+        "profile_match": 70,
+        "posted": 20, 
+        "saved": true,
+        "easy_applied": true,
+        "company_name": "Pineapple Solutions",
+        "company_profile": "As a Pineapple Solutions developer on our team, you'll be responsible for leading the building of e-commerce applications, developing custom solutions, implementing designs, maintaining existing code.",
+        "required_pro_skills": ["Completely dependable and professional", "Great problem-solving skills", "Positive attitude", "Familiarity of Agile", "Good communication in writing, speaking and presenting at demos"],
+        "required_tech_skills": ["6+ years of experience with PHP", "4+ years of experience with Magento 2", "Experience with complex development processes", "Solid experience with MySQL, Docker, Composer & KnockoutJS", "Deep understanding of Magento architecture, design, theming, dunctional enhancements, optimization & integration methods", "Knowledge of how to identify and execute performance optimizations", "Good at troubleshooting and resolving bugs"],
+        "benefits": ["401(k)", "Paid time off", "Vision Insurance"]
+    },
+    {
+        "job_id": 3,
+        "title": "UX/UI",
+        "job_title": "Product Designer",
+        "experience": 2,
+        "salary": "60,000",
+        "location": ["Remote"],
+        "profile_match": 60,
+        "posted": 20, 
+        "saved": true,
+        "easy_applied": true,
+        "company_name": "Pineapple Solutions",
+        "company_profile": "As a Pineapple Solutions developer on our team, you'll be responsible for leading the building of e-commerce applications, developing custom solutions, implementing designs, maintaining existing code.",
+        "required_pro_skills": ["Completely dependable and professional", "Great problem-solving skills", "Positive attitude", "Familiarity of Agile", "Good communication in writing, speaking and presenting at demos"],
+        "required_tech_skills": ["6+ years of experience with PHP", "4+ years of experience with Magento 2", "Experience with complex development processes", "Solid experience with MySQL, Docker, Composer & KnockoutJS", "Deep understanding of Magento architecture, design, theming, dunctional enhancements, optimization & integration methods", "Knowledge of how to identify and execute performance optimizations", "Good at troubleshooting and resolving bugs"],
+        "benefits": ["401(k)", "Paid time off", "Vision Insurance"]
+    }
+]
