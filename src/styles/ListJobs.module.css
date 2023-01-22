@@ -1,0 +1,114 @@
+.header {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 59%;
+    }
+    
+    .card {
+        border: gray;
+        border-style: solid;
+        border-radius: 10px;
+        width: 70%;
+        margin: auto auto 50px auto;
+    
+    }
+    
+    .carddisplay {
+        display: flex;
+        padding: 20px;
+    }
+    
+    .left {
+        width: 50%;
+        text-align: left;
+    }
+    
+    .right {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .info {
+        display: flex;
+    }
+    
+    .info h4 {
+        margin: 20px 20px 0 0;
+    }
+    
+    .highlight {
+        background: linear-gradient(to top, yellow 50%, transparent 50%);
+        border-radius: 5px;
+    }
+    
+    .progress {
+        display: flex;
+        text-align: right;
+        width: 30%;
+    }
+    
+    .match {
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+    
+    .time {
+        width: 40%;
+        margin-top: 5%;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+    .bottomright {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20%;
+    }
+    
+    .bookmark {
+        font-size: 2em;
+    }
+    
+    .easyapply {
+        font-weight: normal;
+        color: #fff;
+        background-color: #0058DC;
+        padding: 5px 10px 5px 10px;
+        border-radius: 80px;
+    }
+    
+    .accordianClose {
+        margin: 3px auto;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .accordianOpen {
+        margin: 3px auto;
+        height: 100%;
+    }
+    
+    .view {
+        background-color: green;
+        color: #fff;
+        padding: 10px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    
+    .content {
+        text-align: left;
+        padding: 10px;
+    }
+    
+    .content h3, .content p {
+        margin: 10px 0 10px 0;
+    }
+    
+    .content li {
+        margin-left: 5%;
+    }
