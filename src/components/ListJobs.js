@@ -7,32 +7,32 @@ import { HiOutlineBookmark } from 'react-icons/hi'
 
 import { IconContext } from "react-icons";
 
-function ListJobs() {
+function ListJobs( { job, index }) {
 
-    // FETCHING job data
-    const [jobs, setJobs] = useState([]);
+    // // FETCHING job data
+    // const [jobs, setJobs] = useState([]);
 
-    const fetchJobs=()=>{
-      fetch('/jobData.json'
-      ,{
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }
-      }
-      )
-        .then(function(response){
-          console.log(response)
-          return response.json();
-        })
-        .then(function(jobData) {
-          console.log(jobData);
-          setJobs(jobData);
-        });
-    }
-    useEffect(()=>{
-      fetchJobs()
-    },[]);
+    // const fetchJobs=()=>{
+    //   fetch('/jobData.json'
+    //   ,{
+    //     headers : {
+    //       'Content-Type': 'application/json',
+    //       'Accept': 'application/json'
+    //      }
+    //   }
+    //   )
+    //     .then(function(response){
+    //       console.log(response)
+    //       return response.json();
+    //     })
+    //     .then(function(jobData) {
+    //       console.log(jobData);
+    //       setJobs(jobData);
+    //     });
+    // }
+    // useEffect(()=>{
+    //   fetchJobs()
+    // },[]);
 
     // ACCORDIAN logic
     const [isActive, setIsActive] = useState(null);
@@ -42,23 +42,21 @@ function ListJobs() {
     }
 
     // LIST job data
-    const jobList = jobs.map((job, index) => {
+    const proSkills = job.required_pro_skills.map((skill) =>
+    <li>{skill}</li>
+);
 
-        // mapping array for professional skills, technical skills, and benefits to be in a list
-        const proSkills = job.required_pro_skills.map((skill) =>
-            <li>{skill}</li>
-        );
+const techSkills = job.required_tech_skills.map((skill) =>
+<li>{skill}</li>
+);
 
-        const techSkills = job.required_tech_skills.map((skill) =>
-        <li>{skill}</li>
-        );
+const benefits = job.benefits.map((benefit) =>
+<li>{benefit}</li>
+);
 
-        const benefits = job.benefits.map((benefit) =>
-        <li>{benefit}</li>
-        );
-
-        return (
-            /* JOB CARD SEARCH RESULTS */
+    return (
+        // LIST jobs, using length to show how many jobs were found
+        <div>
             <div className={styles.card}>
                 <div className={styles.carddisplay}>
 
@@ -100,8 +98,8 @@ function ListJobs() {
             </div>
 
             {/* ACCORDIAN data */}
-            <div className="accordion">
-                <div id={job.job_id} className="accordion-item">
+            <div>
+                <div id={job.job_id}>
                     <div className={isActive === index ? styles.accordianOpen : styles.accordianClose}>
                         <div className={styles.content}>
                             <h3>Company Profile</h3>
@@ -126,14 +124,6 @@ function ListJobs() {
                     </div>
                 </div>
             </div>
-        )
-    });
-
-    return (
-        // LIST jobs, using length to show how many jobs were found
-        <div>
-            <h3 className={styles.header}>{jobs.length} Jobs Found</h3>
-            {jobList}
         </div>
     );
 }
