@@ -2,10 +2,21 @@ import { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
 import HomePage from './components/HomePage';
+import ListJobs from './components/ListJobs';
 import { createTheme } from '@mui/material/styles';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true);
+
+  const formSubmit = (event) => {
+    event.preventDefault();
+
+    setLoggedIn(!loggedIn);
+  };
+
+  const handleSignout = () => {
+    setLoggedIn(false);
+  };
 
   const theme = createTheme({
     status: {
@@ -25,7 +36,11 @@ function App() {
 
   return (
     <div className='App'>
-      <Layout>
+      <Layout
+        formSubmit={formSubmit}
+        loggedIn={loggedIn}
+        handleSignout={handleSignout}
+      >
         <HomePage theme={theme} loggedIn={loggedIn} />
       </Layout>
     </div>

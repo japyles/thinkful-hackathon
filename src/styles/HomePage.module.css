@@ -22,7 +22,7 @@
     }
     
     .trending {
-      padding-top: 79px;
+      padding-top: 122px;
       font-size: 75px;
       text-transform: uppercase;
     }
@@ -51,6 +51,7 @@
       justify-content: flex-start;
       flex-wrap: wrap;
       margin: 79px 0 0 79px;
+      text-transform: uppercase;
       /* padding: 25px; */
     }
     
