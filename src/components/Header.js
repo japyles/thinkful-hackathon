@@ -7,6 +7,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import InputAdornment from '@mui/material/InputAdornment';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { createTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 import useWindowDimensions from '../utilities/useWindowDimensions';
 import logo from '../logo.png';
@@ -122,22 +123,48 @@ const Header = ({ formSubmit, loggedIn, handleSignout }) => {
       </div>
 
       <nav className={styles.navbar}>
-        <a href='#' className={styles.logo}>
+        <Link to='/' className={styles.logo}>
           <img src={logo} alt='logo' />
-        </a>
+        </Link>
 
         <ul className={styles.navlinks}>
           <li className={styles.navitem}>
-            <a href='#'>Home</a>
+            <button className='btn'>
+              <Link to='/'>Home</Link>
+            </button>
+          </li>
+          <li className={`dropdown ${styles.dropmenu}`}>
+            <button
+              className='btn dropdown-toggle'
+              type='button'
+              id='dropdownMenuButton'
+              data-toggle='dropdown'
+              aria-haspopup='true'
+              aria-expanded='false'
+            >
+              Resume Services
+            </button>
+            <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+              <Link className='dropdown-item' to='/resume-service-1'>
+                Service 1
+              </Link>
+              <Link className='dropdown-item' to='/resume-service-2'>
+                Service 2
+              </Link>
+              <Link className='dropdown-item' to='/resume-service-3'>
+                Service 3
+              </Link>
+            </div>
           </li>
           <li className={styles.navitem}>
-            <a href='#'>Resume Services</a>
+            <button className='btn'>
+              <Link to='/portfolio-review'>portfolio Review</Link>
+            </button>
           </li>
           <li className={styles.navitem}>
-            <a href='#'>Portfolio Review</a>
-          </li>
-          <li className={styles.navitem}>
-            <a href='#'>Events & Meetups</a>
+            <button className='btn'>
+              <Link to='/events-meetups'>Events & Meetups</Link>
+            </button>
           </li>
           <div className={styles.signin}>
             {loggedIn ? (
@@ -160,18 +187,6 @@ const Header = ({ formSubmit, loggedIn, handleSignout }) => {
             </li>
           </div>
         </ul>
-        {/* <ul className={styles.navlinks}>
-          <li className={styles.navitem} onClick={handleClick}>
-            <a href='#' className={styles.login}>
-              Login
-            </a>
-          </li>
-          <li className={styles.navitem}>
-            <a href='#' className={styles.login}>
-              Sign Up
-            </a>
-          </li>
-        </ul> */}
       </nav>
     </div>
   );
