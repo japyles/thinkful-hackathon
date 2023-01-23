@@ -41,9 +41,9 @@ html {
     color: #fff;
   }
   
-  .navitem:hover {
+  /* .navitem:hover {
     color: #f4f4;
-  }
+  } */
   
   .navbar {
     display: flex;
@@ -55,6 +55,10 @@ html {
 
   .login {
     justify-content: space-evenly;
+  }
+
+  .login:hover {
+    color: #111;
   }
 
   .logo {
@@ -103,4 +107,8 @@ html {
 .dropmenu button {
   text-transform: uppercase;
   color: #fff;
+}
+
+.link:hover {
+  color: #111;
 }
