@@ -11,7 +11,7 @@ function App() {
   const formSubmit = (event) => {
     event.preventDefault();
 
-    setLoggedIn(!loggedIn);
+    setLoggedIn(true);
   };
 
   const handleSignout = () => {
