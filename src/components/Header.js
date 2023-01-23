@@ -130,7 +130,9 @@ const Header = ({ formSubmit, loggedIn, handleSignout }) => {
         <ul className={styles.navlinks}>
           <li className={styles.navitem}>
             <button className='btn'>
-              <Link to='/'>Home</Link>
+              <Link to='/' className={styles.link}>
+                Home
+              </Link>
             </button>
           </li>
           <li className={`dropdown ${styles.dropmenu}`}>
@@ -158,12 +160,16 @@ const Header = ({ formSubmit, loggedIn, handleSignout }) => {
           </li>
           <li className={styles.navitem}>
             <button className='btn'>
-              <Link to='/portfolio-review'>portfolio Review</Link>
+              <Link to='/portfolio-review' className={styles.link}>
+                portfolio Review
+              </Link>
             </button>
           </li>
           <li className={styles.navitem}>
             <button className='btn'>
-              <Link to='/events-meetups'>Events & Meetups</Link>
+              <Link to='/events-meetups' className={styles.link}>
+                Events & Meetups
+              </Link>
             </button>
           </li>
           <div className={styles.signin}>
