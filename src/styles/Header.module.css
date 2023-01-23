@@ -78,3 +78,20 @@ html {
     margin-right: 10px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.input {
+  margin: 10px;
+  padding: 10px;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 75px;
+}

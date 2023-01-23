@@ -12,9 +12,6 @@ import data from '../data/trendingJobs.json';
 import appliedSaved from '../data/appliedSaved.json';
 import styles from '../styles/HomePage.module.css';
 
-import SearchForm from './SearchForm';
-import ListJobs from './ListJobs';
-
 const HomePage = ({ theme, loggedIn }) => {
   const [search, setSearch] = useState({});
 
@@ -63,8 +60,6 @@ const HomePage = ({ theme, loggedIn }) => {
           </Button>
         </div>
       </form>
-
-      <ListJobs/>
 
       <div>
         {loggedIn ? (
