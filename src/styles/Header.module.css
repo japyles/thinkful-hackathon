@@ -29,6 +29,10 @@ html {
   .navitem {
     text-transform: uppercase;
   }
+
+  .navitem button {
+    text-transform: uppercase;
+  }
   
   .navitem a {
     display: inline-block;
@@ -45,7 +49,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0058DC;
+    /* background-color: #0058DC; */
+    background-color: #0d6efd;
   }
 
   .login {
@@ -93,4 +98,9 @@ html {
   align-items: center;
   justify-content: center;
   margin-left: 75px;
+}
+
+.dropmenu button {
+  text-transform: uppercase;
+  color: #fff;
 }
