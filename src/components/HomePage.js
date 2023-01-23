@@ -16,7 +16,6 @@ import ListJobs from './ListJobs';
 
 const HomePage = ({ theme, loggedIn }) => {
   const [searchTerm, setSearchTerm] = useState({});
-
   const [jobs, setJobs] = useState([]);
 
   const fetchJobs=()=>{

@@ -57,7 +57,6 @@ const benefits = job.benefits.map((benefit) =>
     return (
         // LIST jobs, using length to show how many jobs were found
         <div>
-            <h3 className={styles.header}>{job.length} Jobs Found</h3>
             <div className={styles.card}>
                 <div className={styles.carddisplay}>
 
@@ -99,8 +98,8 @@ const benefits = job.benefits.map((benefit) =>
             </div>
 
             {/* ACCORDIAN data */}
-            <div className="accordion">
-                <div id={job.job_id} className="accordion-item">
+            <div>
+                <div id={job.job_id}>
                     <div className={isActive === index ? styles.accordianOpen : styles.accordianClose}>
                         <div className={styles.content}>
                             <h3>Company Profile</h3>
