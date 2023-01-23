@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> A web app in order to search for jobs
+> A job search web app that allows you to easily apply to jobs quickly
 
 ## Install
 
