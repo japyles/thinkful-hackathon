@@ -3,7 +3,9 @@ import './App.css';
 import Layout from './components/Layout';
 import HomePage from './components/HomePage';
 import ListJobs from './components/ListJobs';
+import Routing from './components/Routing';
 import { createTheme } from '@mui/material/styles';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -41,7 +43,15 @@ function App() {
         loggedIn={loggedIn}
         handleSignout={handleSignout}
       >
-        <HomePage theme={theme} loggedIn={loggedIn} />
+        <Routes>
+          <Route
+            exact
+            path='/'
+            element={<HomePage theme={theme} loggedIn={loggedIn} />}
+          />
+          <Route path='/search-results' element={<ListJobs />} />
+        </Routes>
+        {/* <HomePage theme={theme} loggedIn={loggedIn} /> */}
       </Layout>
     </div>
   );

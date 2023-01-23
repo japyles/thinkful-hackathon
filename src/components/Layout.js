@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
-import Routing from './Routing';
+// import Routing from './Routing';
 
 const Layout = ({ children, formSubmit, loggedIn, handleSignout }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children, formSubmit, loggedIn, handleSignout }) => {
         loggedIn={loggedIn}
         handleSignout={handleSignout}
       />
-      <Routing />
+      {/* <Routing /> */}
       {children}
       {/* <Footer /> */}
     </div>
