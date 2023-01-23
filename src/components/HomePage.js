@@ -18,27 +18,25 @@ const HomePage = ({ theme, loggedIn }) => {
   const [searchTerm, setSearchTerm] = useState({});
   const [jobs, setJobs] = useState([]);
 
-  const fetchJobs=()=>{
-    fetch('/jobData.json'
-    ,{
-      headers : {
+  const fetchJobs = () => {
+    fetch('/jobData.json', {
+      headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }
-    )
-      .then(function(response){
-        console.log(response)
+        Accept: 'application/json',
+      },
+    })
+      .then(function (response) {
+        console.log(response);
         return response.json();
       })
-      .then(function(jobData) {
+      .then(function (jobData) {
         console.log(jobData);
         setJobs(jobData);
       });
-  }
-  useEffect(()=>{
-    fetchJobs()
-  },[]);
+  };
+  useEffect(() => {
+    fetchJobs();
+  }, []);
 
   // const searchSubmit = () => {};
   // const handleSearch = () => {};
@@ -52,7 +50,7 @@ const HomePage = ({ theme, loggedIn }) => {
           type='text'
           placeholder='Job Title or Skill'
           onChange={(event) => {
-            setSearchTerm(event.target.value);
+            setSearchTerm(event.target.value.toLowerCase());
           }}
           className={`${styles.input} ${styles.job}`}
           style={{ padding: '4px' }}
@@ -90,23 +88,23 @@ const HomePage = ({ theme, loggedIn }) => {
         </div>
       </form>
 
-      {jobs.filter((value) => {
-        if (searchTerm === "") {
+      {jobs
+        .filter((value) => {
+          if (searchTerm === '') {
+            return null;
+          } else if (value.title.toLowerCase().includes(searchTerm)) {
+            return value;
+          }
           return null;
-        } else if (
-          value.title.includes(searchTerm)
-        ) {
-          return value;
-        }
-        return null;
-      }).map((val, key) => {
-        return (
-          <div className="user" key={key}>
-            <ListJobs job={val} key={key} />
-            {/* {val.title} */}
-          </div>
-        );
-      })}
+        })
+        .map((val, key) => {
+          return (
+            <div className='user' key={key}>
+              <ListJobs job={val} key={key} />
+              {/* {val.title} */}
+            </div>
+          );
+        })}
 
       <div>
         {loggedIn ? (
