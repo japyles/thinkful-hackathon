@@ -45,8 +45,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
-    /* background-color: #0058DC; */
+    background-color: #0058DC;
   }
 
   .login {

@@ -1,15 +1,19 @@
-import React from "react";
-import {Routes, Route} from "react-router-dom";
-import SearchForm from "./SearchForm";
-import SignIn from "./SignIn";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+// import HomePage from './HomePage';
+// import ListJobs from './ListJobs';
 
 function Routing() {
-    return (
-    <Routes>
-        <Route exact path="/" />
-        {/* <Route path="/search-results" element={<SearchForm />}/> */}
-    </Routes>
-    );
+  return (
+    <h1>routing</h1>
+    // <Routes>
+    //   <Route
+    //     path='/'
+    //     element={<HomePage theme={theme} loggedIn={loggedIn} />}
+    //   />
+    //   <Route path='/search-results' element={<ListJobs />} />
+    // </Routes>
+  );
 }
 
 export default Routing;
